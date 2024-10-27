@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     private SphereCollider sphereCollider;
     private Rigidbody rb;
 
+    // ENCAPSULATION
     public string ballName { get; private set; } = "Ball";
 
     protected float bounce = 0.8f;
@@ -22,6 +23,7 @@ public class Ball : MonoBehaviour
         sphereCollider.material.bounciness = bounce;
     }
 
+    // ABSTRACTION
     void Knockup(int force)
     {
         rb.AddForce(Vector3.up * force, ForceMode.Impulse);
